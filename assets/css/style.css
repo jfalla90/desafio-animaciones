@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+} 
+
+/*inicio de diseño - sección header versión mobile*/
+
+header{
+    background-color: hsla(240, 90%, 20%, 0.56);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo img{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.menu-desktop{
+    display: none;
+}
+.menu-mobile a i{
+    color: #fff;
+}
+
+/*fin de diseño - sección header versión mobile*/
+
+/*inicio de diseño - section-main versión mobile*/
+
+.categoria {
+    background-color: hsla(34, 57%, 70%,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: move 5s ease-in infinite;
+    animation-direction: alternate-reverse;
+}
+
+.categoria div{
+    text-align: center;
+}
+@keyframes move {
+    0% {
+    transform: scale(0.95);
+    }
+    25% {
+    transform: scale(1);
+    background-color: orange;
+    }
+}
+
+h3{
+    text-align: center;
+    background-color: bisque;
+}
+
+h3:hover{
+    text-transform: uppercase;
+    background-color: rgb(211, 216, 137);
+}
+
+.container-productos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.cards-productos{
+    border: 1px solid hsla(34, 57%, 70%,0.15);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-productos a{
+    text-decoration: none;
+    color: black;
+    background-color: hsla(90, 60%, 38%, 0.25);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cards-productos a:hover{
+    background-color: hsla(4, 88%, 52%, 0.45);
+}
+
+.img {
+    filter:grayscale(1);
+    height: 10em;
+    width: 10em;
+    border-radius: 5px;
+    rotate: 180deg;
+}
+
+.img:hover{
+    filter: none;
+    transition: 2s;
+    rotate: 0deg;
+}
+
+/*fin de diseño - section-main versión mobile*/
+
+/*inicio de diseño - footer versión mobile*/
+
+footer{
+    background-color: hsla(240, 90%, 20%, 0.56);
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;  
+}
+footer div a {
+    text-decoration: none;
+} 
+       
+footer div a i{
+    color: white;
+}
+
+footer div a .fa-tiktok:hover{
+    color: #E01A59;
+    transition: 1s;
+}
+
+footer div a .fa-facebook:hover{
+    color: #1DA1F2;
+    transition: 1s;
+}
+
+footer div a .fa-whatsapp:hover{
+    color: #78C257;
+    transition: 1s;
+}
+
+footer p{
+    color: white;
+}
+
+/*-----------------------fin de diseño - footer versión mobile-------------------------------------*/
+
+/*-----------------------fin configuración versión mobile-------------------------------------------*/
+
+
+/*---------------------------inicio configuración versión tablet-------------------------------------*/
+
+@media only screen and (min-width: 576px) {
+
+/*---------------------inicio de diseño - sección header versión tablet----------------------------------*/
+
+    .grid-container header{
+        display: flex;
+        background-color: hsla(240, 90%, 20%, 0.56);
+    }
+
+    .grid-container header .menu-desktop{
+        display: flex;
+    }
+
+    .grid-container header .menu-desktop ul{
+        display: flex;
+    }
+
+    .menu-desktop ul li{
+        list-style-type: none;
+    }
+
+    .menu-desktop ul li a{
+        text-decoration: none;
+        color: #fff;
+        margin: 10px;
+    }
+
+    header .menu-desktop ul li a:hover{
+        background-color: hsl(197, 71%, 73%, 0.25) ;
+        color: white;
+        transition: ease;
+    }
+
+    .grid-container header .menu-mobile{
+        display: none;
+    }
+
+/*----------------fin de diseño - sección header versión tablet----------------------------------*/
+
+/*------------------inicio de diseño - section-main versión tablet-------------------------------*/ 
+
+    .categoria{
+        background-color: hsla(34, 57%, 70%,0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: move 5s ease-in infinite;
+        animation-direction: alternate-reverse;
+    }
+    
+    .categoria div{
+        text-align: center;
+    }
+    @keyframes move {
+        0% {
+        transform: scale(0.95);
+        }
+        25% {
+        transform: scale(1);
+        background-color: orange;
+        }
+    }
+    
+    h3{
+        text-align: center;
+        background-color: bisque;
+    }
+    
+    h3:hover{
+        text-transform: uppercase;
+        background-color: rgb(211, 216, 137);
+    }
+    main{
+        overflow-y: scroll;
+        height: 35em;
+    }
+   
+    .container-productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .cards-productos{
+        border: 1px solid hsla(34, 57%, 70%,0.15);
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards-productos a{
+        text-decoration: none;
+        color: black;
+        background-color: hsla(90, 60%, 38%, 0.25);
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .cards-productos a:hover{
+        background-color: hsla(4, 88%, 52%, 0.45);
+    }
+    
+    .img {
+        filter:grayscale(1);
+        height: 10em;
+        width: 10em;
+        border-radius: 5px;
+        rotate: 180deg;
+    }
+    
+    .img:hover{
+        filter: none;
+        transition: 2s;
+        rotate: 0deg;
+    }
+
+/*--------------------------fin de diseño - section-main versión tablet---------------------------------*/
+
+/*--------------------------inicio de diseño - footer versión tablet-------------------------------------*/
+
+    footer{
+        background-color: hsla(240, 90%, 20%, 0.56);;
+        height: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;  
+    }
+    footer div a {
+        text-decoration: none;
+    } 
+           
+    footer div a i{
+        color: white;
+    }
+
+    footer div a .fa-tiktok:hover{
+        color: #E01A59;
+        transition: 1s;
+    }
+    
+    footer div a .fa-facebook:hover{
+        color: #1DA1F2;
+        transition: 1s;
+    }
+    
+    footer div a .fa-whatsapp:hover{
+        color: #78C257;
+        transition: 1s;
+    }
+
+    footer p{
+        color: white;
+    }
+
+/*----------------------fin de diseño - footer versión tablet------------------------------------*/
+}
+
+/*------------------------fin de diseño - section-main versión tablet-------------------------------*/ 
+
+/*-----------------------inicio de diseño - section-main versión desktop-------------------------------*/ 
+
+@media only screen and (min-width: 768px) {
+
+/*inicio de diseño - sección header versión desktop*/
+        .grid-container header{
+            grid-area: header;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: hsla(240, 90%, 20%, 0.56);
+        }
+
+        .grid-container header .logo img{
+            border-radius: 50%;
+            width: 8em;
+            height: 8em;
+            margin-bottom: 4em;
+        }
+
+        .grid-container header .menu-desktop{
+            display: flex;
+        }
+
+        .grid-container header .menu-desktop ul{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-desktop ul li{
+            list-style-type: none;
+            margin: 5px;
+        }
+
+        .menu-desktop ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        .grid-container header .menu-desktop ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        header .menu-desktop ul li a:hover{
+            background-color: hsl(197, 71%, 73%, 0.25) ;
+            color: white;
+            transition: ease;
+        }
+    
+        header .menu-mobile {
+            display: none;
+        }
+    
+/*fin de diseño - sección header versión desktop*/ 
+
+/*inicio de diseño - section-main versión desktop*/
+
+        section{
+            grid-area: section;
+        }
+        
+        .categoria{
+            background-color: hsla(34, 57%, 70%,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: move 5s ease-in infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes move {
+            0% {
+            transform: scale(0.95);
+            }
+            25% {
+            transform: scale(1);
+            background-color: orange;
+            }
+        }
+        
+        h3{
+            text-align: center;
+            background-color: bisque;
+        }
+        
+        h3:hover{
+            text-transform: uppercase;
+            background-color: rgb(211, 216, 137);
+        }
+        main{
+            grid-area: main;
+            overflow-y: scroll;
+        }
+              
+        .container-productos{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 10px;
+        }
+        .cards-productos{
+            border: 1px solid hsla(34, 57%, 70%,0.15);
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards-productos a{
+            text-decoration: none;
+            color: black;
+            background-color: hsla(90, 60%, 38%, 0.25);
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .cards-productos a:hover{
+            background-color: hsla(4, 88%, 52%, 0.45);
+        }
+        .img {
+            filter:grayscale(1);
+            height: 10em;
+            width: 10em;
+            border-radius: 5px;
+            rotate: 180deg;
+        }
+        
+        .img:hover{
+            filter: none;
+            transition: 2s;
+            rotate: 0deg;
+        }
+
+/*fin de diseño - section-main versión desktop*/
+
+/*inicio de diseño - footer versión desktop*/
+
+        footer{
+            grid-area: footer;
+            background-color: hsla(240, 90%, 20%, 0.56);
+            height: 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center ;  
+        }
+
+        footer div a {
+            text-decoration: none;
+        } 
+
+        footer div a i{
+            color: white;
+        }
+
+        footer div a .fa-tiktok:hover{
+            color: #E01A59;
+            transition: 1s;
+        }
+        
+        footer div a .fa-facebook:hover{
+            color: #1DA1F2;
+            transition: 1s;
+        }
+        
+        footer div a .fa-whatsapp:hover{
+            color: #78C257;
+            transition: 1s;
+        }
+
+        footer p{
+            color: white;
+        }
+/*------------------------------inicio de diseño - footer versión desktop--------------------------*/
+
+/*---------------------------------inicio layout Grid - versión desktop------------------------------*/
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: 
+            "header section section"
+            "header main main"
+            "header footer footer";
+        }
+
+/*---------------------------fin layout Grid - versión desktop------------------------------------------*/
+    }
+
+/*fin de diseño - section-main versión tablet*/ 
